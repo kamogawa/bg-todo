@@ -28,7 +28,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content"/>
-        <Text style={styles.title}> KBG¥'s TO DO</Text>
+        <Text style={styles.title}> `KBG's TO DO`</Text>
         <View style={styles.card}>
           <TextInput 
             style={styles.input} 
@@ -66,17 +66,6 @@ export default class App extends React.Component {
     });
   };
   _loadToDos = async () => {
-    // try{
-    //   const toDos = await AsyncStorage.getItem("toDos");
-    //   const parsedToDos = JSON.parse(toDos);
-    //   console.log(parsedToDos);
-    //   this.setState({
-    //     loadedToDos: true,
-    //     toDos: parsedToDos
-    //   });
-    // } catch (err) {
-    //   console.log(err)
-    // }
     try {
       const toDos = await AsyncStorage.getItem("toDos");
       const parsedToDos = JSON.parse(toDos);
